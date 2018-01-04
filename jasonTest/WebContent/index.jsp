@@ -26,5 +26,11 @@
 		网址: <input type="text" name="url" />
 		<input type="submit" value="提交" />
 		</form>
+		<form action="calc" method="get">
+		数字1：<input type="text" name="nub1">
+		数字2：<input type="text" name="nub2">
+		结果：<%response.getWriter(); %>
+		<input type="submit" value="提交">
+		</form>
  </body>
 </html>

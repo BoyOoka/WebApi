@@ -49,6 +49,7 @@ public class calc extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		response.setContentType("text/plain;charset=UTF-8");
 	//	response.getWriter().append("Served at: ").append(request.getContextPath());
 		String i = request.getParameter("nub1");
 		String j = request.getParameter("nub2");
@@ -58,10 +59,11 @@ public class calc extends HttpServlet {
 		String f = df.format(s);
 		System.out.println(df.format(s));
 		Sqlconnect sql =  new Sqlconnect();
-		ResultSet info = sql.Sqlconnect("select * from studentinfo");
+		String info = sql.Sqlconnect("select * from studentinfo");
 		System.out.println(info);
 		PrintWriter out = new PrintWriter(response.getOutputStream());
 			out.println(f);
+			out.print(info);
 			out.flush();
 	}
 

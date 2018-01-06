@@ -45,13 +45,13 @@ public class Student extends HttpServlet {
 		 j.setAge(10);
 		 j.setName("jack");
 		 j.setSex("boy");
-		 j.setId(1);
+		 j.setId("1");
 		 list.add(j);
 		 jsonDemo j1 = new jsonDemo();
 		 j1.setAge(10);
 		 j1.setName("tim");
 		 j1.setSex("boy");
-		 j1.setId(2);
+		 j1.setId("2");
 		 list.add(j1);
 		 Total nt = new Total(list.size(),list);
 		 String str = gson.toJson(nt);

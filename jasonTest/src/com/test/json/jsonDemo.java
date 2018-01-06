@@ -6,13 +6,13 @@ import java.util.List;
 import com.google.gson.Gson;
 
 public class jsonDemo {
-	public int id;
+	public String id;
 	public int age;
 	public String name;
 	public String sex;
 	
-	public void setId(int id) {
-		this.id = id;
+	public void setId(String string) {
+		this.id = string;
 	}
 	public void setAge(int age){
 		this.age = age;
@@ -26,6 +26,7 @@ public class jsonDemo {
 	 public String toString() {  
 	        return "Person [id=" + id + ", name=" + name + ", age=" + age +"sex="+sex+ "]";  
 	    }  
+	 /*
 	 public static void main(String[] args){
 		 List<jsonDemo> list=new ArrayList<jsonDemo>();
 		 Gson gson = new Gson();
@@ -33,18 +34,18 @@ public class jsonDemo {
 		 j.setAge(10);
 		 j.setName("jack");
 		 j.setSex("boy");
-		 j.setId(1);
+		 j.setId("1");
 		 list.add(j);
 		 jsonDemo j1 = new jsonDemo();
 		 j1.setAge(10);
 		 j1.setName("tim");
 		 j1.setSex("boy");
-		 j1.setId(2);
+		 j1.setId("2");
 		 list.add(j1);
 		 Total nt = new Total(list.size(),list);
 		 String str = gson.toJson(nt);
 		 System.out.println(str);
-	 }
+	 }*/
 }
 class Total{
 	 int total; 
